@@ -1,5 +1,3 @@
-// import { initializeApp } from "firebase/app";
-// import firebaseConfig from "../firebaseConfig";
 import './App.css';
 
 import "./css/main.css";
@@ -10,7 +8,6 @@ import HeroSection from "./Components/HeroSection";
 
 
 function App() {
-  // const app = initializeApp(firebaseConfig);
   return (
     <div className="App">
       <Header />

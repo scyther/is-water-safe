@@ -2,15 +2,15 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer class="footer">
-      <div class="footer-head">
+    <footer className="footer">
+      <div className="footer-head">
         <p>
           Made by
-          <a href="https://github.com/scyther" target="_blank">
+          <a href="https://github.com/scyther" target="_blank" rel="noreferrer">
             Chirag
           </a>
           and
-          <a href="https://github.com/vivekmehto" target="_blank">
+          <a href="https://github.com/vivekmehto" target="_blank" rel="noreferrer">
             Vivek
           </a>
         </p>
