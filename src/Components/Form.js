@@ -68,43 +68,54 @@ const Form = () => {
         .catch((error) => {
           console.error(error);
         });
+    } else {
+      console.log("here");
     }
-    else{console.log("here")}
   };
   return (
-    <form>
-      <label htmlFor="state">State</label>
-      <select
-        name="states"
-        id="state"
-        onChange={(event) => setState(event.target.value)}
-      >
-        <option value="">Select State/UT</option>
-        {states.map((item) => {
-          return (
-            <option value={item} key={item}>
-              {item}
-            </option>
-          );
-        })}
-      </select>
-
-      <label for="district">Districts</label>
-      <select
-        name="districts"
-        id="district"
-        onChange={(event) => setDistrict(event.target.value)}
-      >
-        <option value="">Select District</option>
-        {districts.map((item) => {
-          return (
-            <option value={item} key={item}>
-              {item}
-            </option>
-          );
-        })}
-      </select>
+    <form className="form-container">
+      <div className="state-container">
+        <label htmlFor="state">Enter Your State : </label>
+        <div>
+          <select
+            name="states"
+            id="state"
+            onChange={(event) => setState(event.target.value)}
+          >
+            <option value="">Select State</option>
+            {states.map((item) => {
+              return (
+                <option value={item} key={item}>
+                  {item}
+                </option>
+              );
+            })}
+          </select>
+          <span className="form-arrow"></span>
+        </div>
+      </div>
+      <div className="district-container">
+        <label for="district">Enter Your District : </label>
+        <div>
+          <select
+            name="districts"
+            id="district"
+            onChange={(event) => setDistrict(event.target.value)}
+          >
+            <option value="">Select District</option>
+            {districts.map((item) => {
+              return (
+                <option value={item} key={item}>
+                  {item}
+                </option>
+              );
+            })}
+          </select>
+          <span className="form-arrow"></span>
+        </div>
+      </div>
       <input
+        className="submit-btn"
         type="submit"
         value="Submit"
         onSubmit={(e) => {

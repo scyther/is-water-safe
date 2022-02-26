@@ -5,6 +5,7 @@
 @import url(header.css);
 @import url(footer.css);
 @import url(hero-section.css);
+@import url(form.css);
 @import url(media-queries.css);
 :root {
   --primary-color: #1d4ed8;
@@ -15,4 +16,8 @@
   --accent-color: #fbbf24;
   --text-color: #292524;
   --background-color: #f1f5f9;
+  --slate: hsl(210, 40%, 86%);
+  --grey: hsl(218, 11%, 65%);
+  --grey-dark: hsl(215, 14%, 34%);
+  --neutral: hsl(0, 0%, 25%);
 }

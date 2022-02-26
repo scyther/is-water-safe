@@ -1,0 +1,80 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.state-container,
+.district-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 1rem;
+}
+
+.state-container div,
+.district-container div {
+  position: relative;
+}
+.state-container select,
+.district-container select {
+  border-radius: 5px;
+  width: 20rem;
+  font-size: 1.5rem;
+  padding: 1rem 6rem 1rem 1.5rem;
+  background-color: var(--neutral);
+  color: white;
+}
+
+option {
+  font-size: 1.5rem;
+}
+
+.form-arrow {
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--neutral);
+  width: 5rem;
+  height: 100%;
+  pointer-events: none;
+}
+
+.form-arrow::before,
+.form-arrow::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-arrow::before {
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-top: 0.5rem solid white;
+  top: 50%;
+}
+
+.submit-btn {
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.5rem;
+  width: max-content;
+  align-self: center;
+  text-transform: uppercase;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-dark);
+  transition: 0.5s;
+  box-shadow: 2px 2px 5px var(--secondary-color);
+}
