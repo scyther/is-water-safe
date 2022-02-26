@@ -1,8 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { initializeApp } from "firebase/app";
-import { get, getDatabase, ref } from "firebase/database";
+import { get, getDatabase, ref, set } from "firebase/database";
 import firebaseConfig from "../firebaseConfig";
+
+import { getPurifier, getQuality } from "../utils";
 const Form = () => {
   const app = initializeApp(firebaseConfig);
   const db = getDatabase(app);
@@ -11,7 +13,6 @@ const Form = () => {
   const [districts, setDistricts] = useState([]);
   const [district, setDistrict] = useState("");
   const [tds, setTds] = useState(0);
-
   const getStates = () => {
     const stateRef = ref(db, "state");
     get(stateRef)
@@ -74,58 +75,69 @@ const Form = () => {
     }
   };
   return (
-    <div className="form-container">
-      <div className="state-container">
-        <label htmlFor="state">Enter Your State : </label>
-        <div>
-          <select
-            name="states"
-            id="state"
-            onChange={(event) => setState(event.target.value)}
-          >
-            <option value="">Select State</option>
-            {states.map((item) => {
-              return (
-                <option value={item} key={item}>
-                  {item}
-                </option>
-              );
-            })}
-          </select>
-          <span className="form-arrow"></span>
-        </div>
-      </div>
-      <div className="district-container">
-        <label for="district">Enter Your District : </label>
-        <div>
-          <select
-            name="districts"
-            id="district"
-            onChange={(event) => setDistrict(event.target.value)}
-          >
-            <option value="">Select District</option>
-            {districts.map((item) => {
-              return (
-                <option value={item} key={item}>
-                  {item}
-                </option>
-              );
-            })}
-          </select>
-          <span className="form-arrow"></span>
-        </div>
-      </div>
+    <main className="main">
+      <h1>
+        {tds
+          ? ` TDS value is ${tds} which is ${getQuality(
+              tds
+            )} and you should use ${getPurifier(tds)}`
+          : "Lets check water of your area is really a drinking water."}
+      </h1>
+      <div className="main-container">
+        <div className="form-container">
+          <div className="state-container">
+            <label htmlFor="state">Enter Your State : </label>
+            <div>
+              <select
+                name="states"
+                id="state"
+                onChange={(event) => setState(event.target.value)}
+              >
+                <option value="">Select State</option>
+                {states.map((item) => {
+                  return (
+                    <option value={item} key={item}>
+                      {item}
+                    </option>
+                  );
+                })}
+              </select>
+              <span className="form-arrow"></span>
+            </div>
+          </div>
+          <div className="district-container">
+            <label for="district">Enter Your District : </label>
+            <div>
+              <select
+                name="districts"
+                id="district"
+                onChange={(event) => setDistrict(event.target.value)}
+              >
+                <option value="">Select District</option>
+                {districts.map((item) => {
+                  return (
+                    <option value={item} key={item}>
+                      {item}
+                    </option>
+                  );
+                })}
+              </select>
+              <span className="form-arrow"></span>
+            </div>
+          </div>
 
-      <input
-        className="submit-btn"
-        type="submit"
-        value="Submit"
-        onClick={(e) => {
-          e.preventDefault();
-          getResult();
-        }}
-      />
-    </div>
+          <input
+            className="submit-btn"
+            type="submit"
+            value="Submit"
+            onClick={(e) => {
+              e.preventDefault();
+              getResult();
+            }}
+          />
+        </div>
+      </div>
+    </main>
   );
 };
 
