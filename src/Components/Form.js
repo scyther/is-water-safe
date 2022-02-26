@@ -10,6 +10,7 @@ const Form = () => {
   const [state, setState] = useState("");
   const [districts, setDistricts] = useState([]);
   const [district, setDistrict] = useState("");
+  const [tds, setTds] = useState(0)
 
   const getStates = () => {
     const stateRef = ref(db, "state");
@@ -60,7 +61,7 @@ const Form = () => {
       get(districtRef)
         .then((snapshot) => {
           if (snapshot.exists()) {
-            console.log(snapshot.val());
+            setTds(snapshot.val());
           } else {
             console.log("No data available");
           }
@@ -73,6 +74,7 @@ const Form = () => {
     }
   };
   return (
+
     <form className="form-container">
       <div className="state-container">
         <label htmlFor="state">Enter Your State : </label>
@@ -114,16 +116,48 @@ const Form = () => {
           <span className="form-arrow"></span>
         </div>
       </div>
+    <>
+      <label htmlFor="state">State</label>
+      <select
+        name="states"
+        id="state"
+        onChange={(event) => setState(event.target.value)}
+      >
+        <option value="">Select State/UT</option>
+        {states.map((item) => {
+          return (
+            <option value={item} key={item}>
+              {item}
+            </option>
+          );
+        })}
+      </select>
+
+      <label htmlFor="district">Districts</label>
+      <select
+        name="districts"
+        id="district"
+        onChange={(event) => setDistrict(event.target.value)}
+      >
+        <option value="">Select District</option>
+        {districts.map((item) => {
+          return (
+            <option value={item} key={item}>
+              {item}
+            </option>
+          );
+        })}
+      </select>
       <input
         className="submit-btn"
         type="submit"
         value="Submit"
-        onSubmit={(e) => {
+        onClick={(e) => {
           e.preventDefault();
           getResult();
         }}
       />
-    </form>
+    </>
   );
 };
 
