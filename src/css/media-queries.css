@@ -1,10 +1,41 @@
-@media only screen and (max-width: 668px) {
-  .head {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+@media only screen and (max-width: 320px) {
+  .state-container,
+  .district-container {
+    font-size: 1.2rem;
   }
-  /* .header-nav {
-    display: none;
-  } */
+  .state-container select,
+  .district-container select {
+    width: 8rem;
+    font-size: 1rem;
+  }
+
+  .main h1 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .state-container select,
+  .district-container select {
+    width: 12rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+  .form-arrow {
+    width: 2rem;
+  }
+
+  option {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .state-container,
+  .district-container {
+    flex-direction: column;
+  }
+  .main h1 {
+    text-align: center;
+  }
 }
