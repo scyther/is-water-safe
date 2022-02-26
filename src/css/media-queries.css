@@ -1,0 +1,10 @@
+@media only screen and (max-width: 668px) {
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  /* .header-nav {
+    display: none;
+  } */
+}
