@@ -75,59 +75,6 @@ const Form = () => {
     }
   };
   return (
-<<<<<<< HEAD
-    <div className="form-container">
-      <div className="state-container">
-        <label htmlFor="state">Enter Your State : </label>
-        <div>
-          <select
-            name="states"
-            id="state"
-            onChange={(event) => setState(event.target.value)}
-          >
-            <option value="">Select State</option>
-            {states.map((item) => {
-              return (
-                <option value={item} key={item}>
-                  {item}
-                </option>
-              );
-            })}
-          </select>
-          <span className="form-arrow"></span>
-        </div>
-      </div>
-      <div className="district-container">
-        <label htmlFor="district">Enter Your District : </label>
-        <div>
-          <select
-            name="districts"
-            id="district"
-            onChange={(event) => setDistrict(event.target.value)}
-          >
-            <option value="">Select District</option>
-            {districts.map((item) => {
-              return (
-                <option value={item} key={item}>
-                  {item}
-                </option>
-              );
-            })}
-          </select>
-          <span className="form-arrow"></span>
-        </div>
-      </div>
-      <input
-        className="submit-btn"
-        type="submit"
-        value="Submit"
-        onClick={(e) => {
-          e.preventDefault();
-          getResult();
-        }}
-      />
-    </div>
-=======
     <main className="main">
       <h1>
         {tds
@@ -191,7 +138,6 @@ const Form = () => {
         </div>
       </div>
     </main>
->>>>>>> 53b3d3588c27378897416f7790c5be6bb2ffd743
   );
 };
 
