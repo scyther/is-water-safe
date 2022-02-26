@@ -24,7 +24,7 @@
 
 .form-container label,
 .form-container input {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   width: 50%;
   align-self: center;
 }
