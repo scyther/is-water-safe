@@ -17,7 +17,7 @@ const Footer = () => {
       </div>
       <div>
         <p>
-          ©️ <span class="logo">💧isWaterSafe | 2022 </span>
+          ©️ <span className="logo">💧isWaterSafe | 2022 </span>
         </p>
       </div>
     </footer>

@@ -10,6 +10,7 @@ const Form = () => {
   const [state, setState] = useState("");
   const [districts, setDistricts] = useState([]);
   const [district, setDistrict] = useState("");
+  const [tds, setTds] = useState(0)
 
   const getStates = () => {
     const stateRef = ref(db, "state");
@@ -60,7 +61,7 @@ const Form = () => {
       get(districtRef)
         .then((snapshot) => {
           if (snapshot.exists()) {
-            console.log(snapshot.val());
+            setTds(snapshot.val());
           } else {
             console.log("No data available");
           }
@@ -69,10 +70,9 @@ const Form = () => {
           console.error(error);
         });
     }
-    else{console.log("here")}
   };
   return (
-    <form>
+    <>
       <label htmlFor="state">State</label>
       <select
         name="states"
@@ -89,7 +89,7 @@ const Form = () => {
         })}
       </select>
 
-      <label for="district">Districts</label>
+      <label htmlFor="district">Districts</label>
       <select
         name="districts"
         id="district"
@@ -107,12 +107,12 @@ const Form = () => {
       <input
         type="submit"
         value="Submit"
-        onSubmit={(e) => {
+        onClick={(e) => {
           e.preventDefault();
           getResult();
         }}
       />
-    </form>
+    </>
   );
 };
 
