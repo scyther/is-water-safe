@@ -10,7 +10,7 @@ const Form = () => {
   const [state, setState] = useState("");
   const [districts, setDistricts] = useState([]);
   const [district, setDistrict] = useState("");
-  const [tds, setTds] = useState(0)
+  const [tds, setTds] = useState(0);
 
   const getStates = () => {
     const stateRef = ref(db, "state");
@@ -74,7 +74,6 @@ const Form = () => {
     }
   };
   return (
-
     <div className="form-container">
       <div className="state-container">
         <label htmlFor="state">Enter Your State : </label>
@@ -116,7 +115,6 @@ const Form = () => {
           <span className="form-arrow"></span>
         </div>
       </div>
-   
       <input
         className="submit-btn"
         type="submit"
