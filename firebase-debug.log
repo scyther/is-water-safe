@@ -1,0 +1,13 @@
+[debug] [2022-02-26T16:23:54.761Z] ----------------------------------------------------------------------
+[debug] [2022-02-26T16:23:54.763Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chirag\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-02-26T16:23:54.763Z] CLI Version:   10.2.1
+[debug] [2022-02-26T16:23:54.763Z] Platform:      win32
+[debug] [2022-02-26T16:23:54.764Z] Node Version:  v16.10.0
+[debug] [2022-02-26T16:23:54.764Z] Time:          Sat Feb 26 2022 21:53:54 GMT+0530 (India Standard Time)
+[debug] [2022-02-26T16:23:54.764Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-02-26T16:23:54.816Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-02-26T16:23:54.816Z] > authorizing via signed-in user (sharma.chirag3737@gmail.com)
+[debug] [2022-02-26T16:23:54.816Z] [iam] checking project is-water-safe for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-02-26T16:23:54.818Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/is-water-safe:testIamPermissions [none]
+[debug] [2022-02-26T16:23:54.818Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/is-water-safe:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
