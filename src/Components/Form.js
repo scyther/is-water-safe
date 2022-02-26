@@ -68,8 +68,9 @@ const Form = () => {
         .catch((error) => {
           console.error(error);
         });
+    } else {
+      console.log("here");
     }
-    else{console.log("here")}
   };
   return (
     <form>
@@ -89,7 +90,7 @@ const Form = () => {
         })}
       </select>
 
-      <label for="district">Districts</label>
+      <label htmlFor="district">Districts</label>
       <select
         name="districts"
         id="district"
