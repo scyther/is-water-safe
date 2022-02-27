@@ -1,9 +1,9 @@
 import React from "react";
 
-const Dialog = () => {
+const Dialog = (setDialog) => {
   return (
     <div className="dialog-container">
-      <form className="form-container" action="">
+      <form className="form-container">
         <h1>Submit a New TDS reading for review</h1>
         <label htmlFor="state">
           Enter State:
@@ -17,7 +17,7 @@ const Dialog = () => {
           Enter TDS:
           <input type="text" id="tds" name="tds" />
         </label>
-        <input className="submit-btn" type="submit" value="Submit" />
+        <input className="submit-btn" type="submit" value="Submit" onClick={() => {setDialog(false)}}/>
       </form>
     </div>
   );

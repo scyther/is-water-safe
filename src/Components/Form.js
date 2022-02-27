@@ -14,6 +14,7 @@ const Form = () => {
   const [districts, setDistricts] = useState([]);
   const [district, setDistrict] = useState("");
   const [tds, setTds] = useState(0);
+  const [dialog, setDialog] = useState(false);
   const getStates = () => {
     const stateRef = ref(db, "state");
     get(stateRef)
@@ -76,7 +77,7 @@ const Form = () => {
     }
   };
   return (
-    <main className="main">
+    <main className="main" >
       <h1>
         {tds
           ? ` TDS value is ${tds} which is ${getQuality(
@@ -107,14 +108,14 @@ const Form = () => {
             </div>
           </div>
           <div className="district-container">
-            <label for="district">Enter Your District : </label>
+            <label for="district">Enter Your Area : </label>
             <div>
               <select
                 name="districts"
                 id="district"
                 onChange={(event) => setDistrict(event.target.value)}
               >
-                <option value="">Select District</option>
+                <option value="">Select Area</option>
                 {districts.map((item) => {
                   return (
                     <option value={item} key={item}>
@@ -138,9 +139,15 @@ const Form = () => {
           />
         </div>
       </div>
-      <h2>Wanna submit a new reading?</h2>
+      <button
+        onClick={() => {
+          setDialog(true);
+        }}
+      >
+        Wanna submit a new reading?
+      </button>
 
-      {/* <Dialog /> */}
+      {dialog && <Dialog setDialog={setDialog}/>}
     </main>
   );
 };
