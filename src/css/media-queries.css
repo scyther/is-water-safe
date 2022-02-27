@@ -13,7 +13,7 @@
     font-size: 1rem;
   }
   .dialog-container .form-container {
-    width: 30%;}
+    width: 90%;}
 }
 
 @media only screen and (max-width: 668px) {
@@ -31,7 +31,7 @@
     font-size: 1rem;
   }
   .dialog-container .form-container {
-    width: 30%;}
+    width: 90%;}
 }
 
 @media only screen and (max-width: 860px) {
@@ -43,5 +43,5 @@
     text-align: center;
   }
   .dialog-container .form-container {
-    width: 30%;}
+    width: 90%;}
 }
