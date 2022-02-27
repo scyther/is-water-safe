@@ -12,6 +12,9 @@
   .main h1 {
     font-size: 1rem;
   }
+  .dialog-form {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 668px) {
@@ -28,6 +31,9 @@
   option {
     font-size: 1rem;
   }
+  .dialog-form {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 860px) {
@@ -37,5 +43,19 @@
   }
   .main h1 {
     text-align: center;
+  }
+  .dialog-form {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .dialog-form {
+    width: 60%;
+    padding: 1rem;
+  }
+
+  .dialog-form h1 {
+    font-size: 1.5rem;
   }
 }
