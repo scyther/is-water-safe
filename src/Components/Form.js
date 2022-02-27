@@ -77,14 +77,18 @@ const Form = () => {
     }
   };
   return (
-    <main className="main" >
-      <h1>
-        {tds
-          ? ` TDS value is ${tds} which is ${getQuality(
-              tds
-            )} and you should use ${getPurifier(tds)}`
-          : "Lets check water of your area is really a drinking water."}
-      </h1>
+    <main className="main">
+      {tds ? (
+        <h1>
+          TDS value is <span style={{ color: "Highlight" }}>{tds}</span> which
+          is <span style={{ color: "tomato" }}>{getQuality(tds)}</span> and you
+          should use{" "}
+          <span style={{ color: "yellowgreen" }}>{getPurifier(tds)}</span>
+        </h1>
+      ) : (
+        <h1>Lets check water of your area is really a drinking water.</h1>
+      )}
+
       <div className="main-container">
         <div className="form-container">
           <div className="state-container">
@@ -143,11 +147,12 @@ const Form = () => {
         onClick={() => {
           setDialog(true);
         }}
+        style={{ backgroundColor: "InfoBackground", border: "none" }}
       >
         Wanna submit a new reading?
       </button>
 
-      {dialog && <Dialog setDialog={setDialog}/>}
+      {dialog && <Dialog setDialog={setDialog} />}
     </main>
   );
 };

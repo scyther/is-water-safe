@@ -1,6 +1,5 @@
 .dialog-container {
   position: absolute;
-
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -12,7 +11,7 @@
 }
 
 .dialog-container .form-container {
-  width: 30%;
+  width: 90%;
   background-color: var(--slate);
   padding: 2rem;
   border-radius: 10px;
