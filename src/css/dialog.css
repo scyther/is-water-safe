@@ -10,20 +10,27 @@
   background-color: rgb(255, 255, 255, 0.5);
 }
 
+<<<<<<< HEAD
 .dialog-container .form-container {
   width: 90%;
+=======
+.dialog-form {
+  width: 50%;
+>>>>>>> eb212b01d032a89821dbdb333abfa689f292d76f
   background-color: var(--slate);
   padding: 2rem;
   border-radius: 10px;
+  height: max-content;
 }
 
-.dialog-container .form-container h1 {
+.dialog-form h1,
+.dialog-form p {
   margin: auto;
+  text-align: center;
 }
 
-.form-container label,
-.form-container input {
+.dialog-form label,
+.dialog-form input {
   margin-left: 0.5rem;
-  width: 50%;
   align-self: center;
 }

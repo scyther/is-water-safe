@@ -12,8 +12,14 @@
   .main h1 {
     font-size: 1rem;
   }
+<<<<<<< HEAD
   .dialog-container .form-container {
     width: 30%;}
+=======
+  .dialog-form {
+    width: 100%;
+  }
+>>>>>>> eb212b01d032a89821dbdb333abfa689f292d76f
 }
 
 @media only screen and (max-width: 668px) {
@@ -30,8 +36,14 @@
   option {
     font-size: 1rem;
   }
+<<<<<<< HEAD
   .dialog-container .form-container {
     width: 30%;}
+=======
+  .dialog-form {
+    width: 80%;
+  }
+>>>>>>> eb212b01d032a89821dbdb333abfa689f292d76f
 }
 
 @media only screen and (max-width: 860px) {
@@ -42,6 +54,23 @@
   .main h1 {
     text-align: center;
   }
+<<<<<<< HEAD
   .dialog-container .form-container {
     width: 30%;}
+=======
+  .dialog-form {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .dialog-form {
+    width: 60%;
+    padding: 1rem;
+  }
+
+  .dialog-form h1 {
+    font-size: 1.5rem;
+  }
+>>>>>>> eb212b01d032a89821dbdb333abfa689f292d76f
 }
