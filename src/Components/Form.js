@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { initializeApp } from "firebase/app";
+import Dialog from "./Dialog";
 import { get, getDatabase, ref } from "firebase/database";
 import firebaseConfig from "../firebaseConfig";
 
@@ -137,6 +138,9 @@ const Form = () => {
           />
         </div>
       </div>
+      <h2>Wanna submit a new reading?</h2>
+
+      {/* <Dialog /> */}
     </main>
   );
 };

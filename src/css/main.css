@@ -7,6 +7,7 @@
 @import url(hero-section.css);
 @import url(form.css);
 @import url(media-queries.css);
+@import url(dialog.css);
 :root {
   --primary-color: #1d4ed8;
   --primary-light: #3b82f6;

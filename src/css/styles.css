@@ -71,6 +71,7 @@ h6 {
 .app {
   font-family: "Roboto", sans-serif;
   background-color: var(--background-color);
+  position: relative;
   color: var(--text-color);
   display: flex;
   flex-direction: column;
