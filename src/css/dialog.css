@@ -1,6 +1,5 @@
 .dialog-container {
   position: absolute;
-
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -11,20 +10,22 @@
   background-color: rgb(255, 255, 255, 0.5);
 }
 
-.dialog-container .form-container {
-  width: 30%;
+.dialog-form {
+  width: 50%;
   background-color: var(--slate);
   padding: 2rem;
   border-radius: 10px;
+  height: max-content;
 }
 
-.dialog-container .form-container h1 {
+.dialog-form h1,
+.dialog-form p {
   margin: auto;
+  text-align: center;
 }
 
-.form-container label,
-.form-container input {
+.dialog-form label,
+.dialog-form input {
   margin-left: 0.5rem;
-  width: 50%;
   align-self: center;
 }
